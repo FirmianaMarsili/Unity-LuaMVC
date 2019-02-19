@@ -1,1 +1,1 @@
-一个纯lua框架,使用于tolua,xlua等各种lua插件
+一个纯lua框架,适用于tolua,xlua等各种lua插件
