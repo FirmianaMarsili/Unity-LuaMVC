@@ -1,2 +1,4 @@
-一个纯lua框架,适用于tolua,xlua等各种lua插件
+一个简单的纯lua框架,适用于tolua,xlua等各种lua插件
 打开实例场景运行即可
+
+如果有出现框架bug可以在issues中提出
