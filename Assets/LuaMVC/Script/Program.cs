@@ -12,14 +12,14 @@ namespace LuaMVC
         public static LuaEnv luaEnv = new LuaEnv();
         public delegate void OnSendNotification(object notificationName, object body, object type);
         private LuaTable scriptEnv = null;
-        public static OnSendNotification SendNotificationHandle;
+        private static OnSendNotification SendNotificationHandle;
         public LuaFunction LuaFunction;
 
         // Use this for initialization
 
         void Start()
         {
-            LuaMVC.Loom.Instance.Init();
+            luaEnv.AddLoader(LoadLuaFromAssetbundle);
             this.scriptEnv = luaEnv.NewTable();
             LuaTable meta = luaEnv.NewTable();
             meta.Set("__index", luaEnv.Global);
@@ -35,15 +35,37 @@ namespace LuaMVC
             }
 
         }
+        private byte[] LoadLuaFromAssetbundle(ref string filePath)
+        {
+            string url = filePath;
+            string[] scriptInfo = filePath.Split('/');
+            LuaMVC.ResourceManager.Instance.LoadLuaScript(filePath.Substring(0, filePath.LastIndexOf("/")), scriptInfo[scriptInfo.Length - 1], (string objects) =>
+            {
+                if (!string.IsNullOrEmpty(objects))
+                {
 
+                    url = objects;
+
+                }
+                else
+                {
+                    Debug.LogError("not find this lua script: " + url);
+                }
+            });
+            if (url == filePath)
+            {
+                Debug.LogError("require luaScript Error: " + url);
+            }            
+            return System.Text.Encoding.UTF8.GetBytes(url);            
+
+
+        }
         private string GetChunkAddress()
         {
             switch (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name)
             {
-                case "Game_Brag_Loading":
-                    return "require('Scene_Brag/LuaScripts/Main');   Main()   ";
-                case "Game_DragonTiger":
-                    return "require('Scene_Dragon/LuaScripts/Main');   Main()   ";
+                case "Tmp":
+                    return "require('Scene_Tmp/LuaScripts/Main');   Main()   ";              
                 default:
                     Debug.LogError("未对当前游戏场景配置入口lua文件");
                     return null;
@@ -102,16 +124,6 @@ namespace LuaMVC
             if (textAsset == null)
                 throw new Exception("load lua error 1  : " + abName + "/" + assetName);
             return System.Text.Encoding.UTF8.GetBytes(textAsset.text);
-
-
-
-
-            //if (!path.Contains(".lua"))
-            //{
-            //    path += ".lua";
-            //}
-            //TextAsset textAsset = Resources.Load(path) as TextAsset;
-            //return System.Text.Encoding.UTF8.GetBytes(textAsset.text);
         }
 
         private string Recursive(string path, string assetName)
@@ -127,15 +139,7 @@ namespace LuaMVC
                     return info.FullName;
             }
             return null;
-
         }
-
-        //internal static void SendNotification(object releaseDelegate)
-        //{
-        //    throw new NotImplementedException();
-        //}
-
-        // Update is called once per frame
         void Update()
         {
             luaEnv.Tick();
@@ -143,7 +147,7 @@ namespace LuaMVC
 
         private void OnApplicationQuit()
         {
-            LuaMVC.Program.SendNotification("LeaveStandardMode");
+            LuaMVC.Program.SendNotification(NotificationType.ReleaseDelegate);
             luaEnv.DoString("  if Facade  then    local cs_facade = Facade.Instance  cs_facade:Clean() end");
             LuaMVC.Program.luaEnv.FullGc();
             luaEnv.Dispose();

@@ -1,0 +1,24 @@
+local Mediator = require("LuaScripts/PureMVC/Patterns/Mediator/Mediator")
+local Test1Mediator = class("Test1Mediator", Mediator)
+Test1Mediator.view = require("Scene_Tmp/LuaScripts/PureMVC/Script/Module/Test1/Test1View")
+local NotificationType = require("Scene_Tmp/LuaScripts/PureMVC/Script/NotificationType")
+
+function Test1Mediator:ctor(mediatorName)
+    Test1Mediator.super.ctor(self,mediatorName)
+end
+
+function Test1Mediator:ReleaseDelegate(notification)
+    Test1Mediator.view.add_Btn.onClick:RemoveAllListeners()
+end
+
+function Test1Mediator:OnRegister()
+    Test1Mediator.super.OnRegister(self)
+    Test1Mediator.view.add_Btn.onClick:AddListener(function()
+        self:SendNotification(NotificationType.ChangeText,math.random(1,5))
+    end)
+    self:RegisterObserver(NotificationType.ReleaseDelegate,"ReleaseDelegate")
+end
+
+
+
+return Test1Mediator

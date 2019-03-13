@@ -1,0 +1,7 @@
+Test1View = {}
+local ViewName = require("Scene_Tmp/LuaScripts/PureMVC/Script/ViewName")
+Test1View.ViewName = ViewName.Test1View
+function Test1View.awake()
+    Test1View.add_Btn = ComponentOperation.FindComponent(Test1View.panel,"Lua_Btn","Button")
+end
+return Test1View

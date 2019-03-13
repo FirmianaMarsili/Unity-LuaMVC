@@ -1,0 +1,46 @@
+-- UTF-8
+
+
+require("LuaScripts/PureMVC/UtilLua/cs_coroutine")
+
+ComponentOperation = {}
+local this = ComponentOperation
+local GameObject = CS.UnityEngine.GameObject
+
+function  this.FindGameObject(parent,path,verify)
+	-- body
+	if verify then
+		error("verify is not nil  " .. "父物体： " .. parent .."路径为：" .. path .. "组件：" ..verify )
+		return
+	end
+	local Object = parent.transform:Find(path).gameObject
+	if Object == nil then
+		
+		return
+	end
+
+	return Object
+end
+
+--找寻某个组件
+function this.FindComponent(gameObject,path,type)
+	-- body
+	--print("此时需要找的组件父物体为 " )
+	--print(gameObject)  --仅仅是为了出错时好寻找
+	--print("路径为：" .. path .. "   组件为  " .. type)
+	local component = gameObject.transform:Find(path):GetComponent(type)
+	if component == nil then
+		error("component is nil " .. "路径为：" .. path .. " 组件为：" .. type)
+		return
+	end
+	return component
+end
+
+--实例并设置父物体
+function  this.ItAndSP( gameObject,transform )
+	local obj = GameObject.Instantiate(gameObject,transform,false);
+	return obj;
+end
+
+
+return this

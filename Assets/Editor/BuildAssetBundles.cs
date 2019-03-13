@@ -6,7 +6,7 @@ using UnityEditor.SceneManagement;
 
 public class BuildAssetBundles : EditorWindow
 {
-    #region Brag_by_lc
+    #region Tmp_by_lc
     public static string platform = string.Empty;
     static List<string> paths = new List<string>();
     static List<string> files = new List<string>();
@@ -15,13 +15,13 @@ public class BuildAssetBundles : EditorWindow
     private static Dictionary<string, int> map;
     private static string AssetBundlesOutputPath = "Assets/BuildBundle/";    
 
-    [MenuItem("Tools/AssetBundle/BuildBrag")]
+    [MenuItem("Tools/AssetBundle/BuildTmp")]
     public static void BuildAssetBundle()
     {
         //AssetBundlesOutputPath = outputPaht;
         Caching.ClearCache();
         ClearAssetBundlesName();
-        Pack(sourcePath,true,"Brag");
+        Pack(sourcePath,true,"Tmp");
         string outputPath = Path.Combine(AssetBundlesOutputPath, Platform.GetPlatformFolder(EditorUserBuildSettings.activeBuildTarget));
         //outputPath = AssetBundlesOutputPath + "/" + Platform.GetPlatformFolder(EditorUserBuildSettings.activeBuildTarget) + "/";
         outputPath = AssetBundlesOutputPath;
@@ -31,7 +31,7 @@ public class BuildAssetBundles : EditorWindow
         }
         Debug.Log(outputPath);
         BuildPipeline.BuildAssetBundles(outputPath, BuildAssetBundleOptions.UncompressedAssetBundle, EditorUserBuildSettings.activeBuildTarget);
-        BuildFileIndex(outputPath, "Brag");
+        BuildFileIndex(outputPath, "Tmp");
         AssetDatabase.Refresh();
 
         Debug.Log("打包完成");
@@ -129,38 +129,18 @@ public class BuildAssetBundles : EditorWindow
         FileStream fs = new FileStream(newFilePath, FileMode.CreateNew);
         StreamWriter sw = new StreamWriter(fs);
 
-//        if (WebClient.APIServer != WebClient.APIServer_ForHot)
-//        {
-//            //测试
-//            string tmpUrl =
-//#if UNITY_ANDROID
-//        "http://cdndomain.ttaqy.com/testhotab/Android/" + gameCode + "/";
-//#endif
-//#if UNITY_IOS
-//        "http://cdndomain.ttaqy.com/testhotab/IOS/" + gameCode + "/";
-//#endif
-//#if UNITY_STANDALONE_WIN
-//               "http://cdndomain.ttaqy.com/testhotab/Windows/" + gameCode + "/";
-//#endif
-//            sw.WriteLine(tmpUrl);
-//            EditorUtility.DisplayDialog("警告", "导出的是测试版的ab包", "嘉俊喜欢吃屎", "返回");
-//            Debug.LogError("测试ab包");
-//        }
-//        else
-//        {
-            //正事
             string tmpUrl =
 #if UNITY_ANDROID
-        "http://cdndomain.ttaqy.com/hotab/Android/" + gameCode + "/";
+        "http://tmp.com/hotab/Android/" + gameCode + "/";
 #endif
 #if UNITY_IOS
-        "http://cdndomain.ttaqy.com/hotab/IOS/" + gameCode + "/";
+        "http://tmp.com/hotab/IOS/" + gameCode + "/";
 #endif
 #if UNITY_STANDALONE_WIN
-               "http://cdndomain.ttaqy.com/hotab/Windows/" + gameCode + "/";
+               "http://tmp.com/hotab/Windows/" + gameCode + "/";
 #endif
             sw.WriteLine(tmpUrl);
-            EditorUtility.DisplayDialog("警告", "导出的是正式版ab包", "嘉俊喜欢吃屎", "返回");
+            EditorUtility.DisplayDialog("警告", "导出的是正式版ab包", "确认", "返回");
             Debug.LogError("正式ab包");
         //}
         for (int i = 0; i < files.Count; i++)
@@ -297,12 +277,7 @@ public class Platform
     [MenuItem("打开场景/Start")]
     public static void OpenStart()
     {
-        OpenScene(GetSceneName("Start"));
-    }
-    [MenuItem("打开场景/Login")]
-    public static void OpenLogin()
-    {
-        OpenScene(GetSceneName("Login"));
+        OpenScene(GetSceneName("Tmp"));
     }
     #endregion
 }

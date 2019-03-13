@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using XLua;
 
-namespace Brag_Sieve_Drag
+namespace Tmp_Sieve_Drag
 {
     [LuaCallCSharp]
     public class DragScript : MonoBehaviour, IBeginDragHandler, IDragHandler, IDropHandler, IDisposable

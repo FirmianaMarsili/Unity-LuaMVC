@@ -1,0 +1,26 @@
+local Mediator = require("LuaScripts/PureMVC/Patterns/Mediator/Mediator")
+local Test2Mediator = class("Test2Mediator", Mediator)
+Test2Mediator.view = require("Scene_Tmp/LuaScripts/PureMVC/Script/Module/Test2/Test2View")
+local NotificationType = require("Scene_Tmp/LuaScripts/PureMVC/Script/NotificationType")
+
+function Test2Mediator:ctor(mediatorName)
+    Test2Mediator.super.ctor(self,mediatorName)
+end
+
+function Test2Mediator:ChangeText(notification)
+    local body = notification:GetBody()
+    if Test2Mediator.view.show_Text.text == "" then
+        Test2Mediator.view.show_Text.text = tostring(body)
+    else
+        Test2Mediator.view.show_Text.text = tostring(tonumber(Test2Mediator.view.show_Text.text) + body)
+    end
+end
+
+function Test2Mediator:OnRegister()
+    Test2Mediator.super.OnRegister(self)
+    self:RegisterObserver(NotificationType.ChangeText,"ChangeText")
+end
+
+
+
+return Test2Mediator

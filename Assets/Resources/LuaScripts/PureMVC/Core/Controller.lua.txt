@@ -1,0 +1,61 @@
+﻿local Controller=class("Controller")
+local View=require("LuaScripts/PureMVC/Core/View")
+local Observer=require("LuaScripts/PureMVC/Patterns/Observer/Observer")
+function Controller:ctor()  --构造函数
+	self.m_commandMap = {}
+	self:InitializeController();
+end	
+
+function Controller:ExecuteCommand(note)
+	local commandType = nil;
+	if not self.m_commandMap[note:GetName()]  then return end;
+	commandType = self.m_commandMap[note:GetName()];
+
+	local commandInstance = commandType.New();
+	commandInstance:Execute(note);
+end
+
+function Controller:RegisterCommand(notificationName, commandType)
+	if not self.m_commandMap[notificationName] then
+		self.m_view:RegisterObserver(notificationName, Observer.New("ExecuteCommand", self));
+	end
+	self.m_commandMap[notificationName] = commandType;
+end
+
+function Controller:HasCommand(notificationName)
+	return self.m_commandMap[notificationName]~=nil;
+end
+
+function Controller:RemoveCommand(notificationName)
+	if self.m_commandMap[notificationName] then
+		self.m_view:RemoveObserver(notificationName, self);
+		--self.m_commandMap:Remove(notificationName);
+		self.m_commandMap[notificationName] = nil
+	end
+end
+function Controller:RemoveAllCommand()
+	local tmp_commandMap = self.m_commandMap;
+	for i, v in pairs(tmp_commandMap) do
+		self:RemoveCommand(i)
+	end
+	tmp_commandMap = nil
+	
+end
+
+function Controller.Instance()
+	if Controller.m_instance == nil then
+		Controller.m_instance = Controller.New();
+	end
+
+	return Controller.m_instance;
+end
+function Controller.Release()
+	Controller.m_instance = nil
+end
+
+function Controller:InitializeController()
+	self.m_view = View.Instance();
+end
+
+
+return Controller

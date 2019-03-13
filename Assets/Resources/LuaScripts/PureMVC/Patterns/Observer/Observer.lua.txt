@@ -1,0 +1,33 @@
+﻿local Observer=class("Observer")
+function Observer:ctor(notifyMethod, notifyContext)
+	self.m_notifyMethod = notifyMethod;
+	self.m_notifyContext = notifyContext;
+end
+
+function Observer:NotifyObserver(notification)
+	local context = self:GetNotifyContext();
+	local method = self:GetNotifyMethod();
+	context[method](context,notification);
+end
+
+function Observer:CompareNotifyContext(obj)
+	return self:GetNotifyContext()==obj;
+end
+
+function Observer:SetNotifyMethod(value)
+	self.m_notifyMethod = value;
+end
+
+function Observer:GetNotifyMethod()
+	return self.m_notifyMethod
+end
+
+function Observer:SetNotifyContext(value)
+	self.m_notifyContext = value;
+end
+
+function Observer:GetNotifyContext()
+	return self.m_notifyContext
+end
+
+return Observer

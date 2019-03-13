@@ -17,32 +17,16 @@ public class AppConst {
     public static string WebUrl_HotUpdate
     {
         get
-        {
-            return "";
-//            if (WebClient.APIServer != WebClient.APIServer_ForHot)
-//            {
-//#if UNITY_ANDROID
-//                return "https://mcnetgamedownload.oss-cn-shenzhen.aliyuncs.com/testhotab/Android/";
-//#endif
-//#if UNITY_IOS
-//                return "https://mcnetgamedownload.oss-cn-shenzhen.aliyuncs.com/testhotab/IOS/";
-//#endif
-//#if UNITY_STANDALONE_WIN
-//                return "https://mcnetgamedownload.oss-cn-shenzhen.aliyuncs.com/testhotab/Windows/";
-//#endif
-//            }
-//            else
-//            {
-//#if UNITY_ANDROID
-//                return "https://mcnetgamedownload.oss-cn-shenzhen.aliyuncs.com/hotab/Android/";
-//#endif
-//#if UNITY_IOS                
-//                return "https://mcnetgamedownload.oss-cn-shenzhen.aliyuncs.com/hotab/IOS/";
-//#endif
-//#if UNITY_STANDALONE_WIN
-//                return "https://mcnetgamedownload.oss-cn-shenzhen.aliyuncs.com/hotab/Windows/";
-//#endif
-            //}            
+        {         
+#if UNITY_ANDROID
+                return "https://tmp.com/Android/";
+#endif
+#if UNITY_IOS
+                return "https://tmp.com/IOS/";
+#endif
+#if UNITY_STANDALONE_WIN
+            return "https://tmp.com/Windows/";
+#endif          
         }
     }
     public const bool UpdateMode = false;  //设置为true 则从服务器下载

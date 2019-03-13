@@ -1,0 +1,29 @@
+
+local util = require 'LuaScripts/PureMVC/UtilLua/util'
+
+
+cs_coroutine = {}
+cs_coroutine.start = function(...)
+	local holder = CS.IEnumeratorHolder(util.cs_generator(...))
+	cs_coroutine.cs_coroutine_runner:StartCoroutine(holder)
+	return holder
+end;
+cs_coroutine.stop = function(holder)
+	cs_coroutine.cs_coroutine_runner:StopCoroutine(holder)
+end
+cs_coroutine.printDep = function()
+	print("release")
+	util.print_func_ref_by_csharp()
+end
+
+--[[
+    this.Create = function(...)
+	    local holder = CS.IEnumeratorHolder(util.cs_generator(...))
+		return holder
+	end
+this.printDep = function()
+   print("release")
+	util.print_func_ref_by_csharp()
+end
+--]]
+

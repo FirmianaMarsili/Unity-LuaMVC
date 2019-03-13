@@ -17,8 +17,7 @@ public class CheckResManager : MonoBehaviour
 {
 
     public static CheckResManager Instance;
-    public Transform loading_Tra;
-    public Text text;
+
     private int needUpdateCount;
     private int allreadyUpdate = 1;
     private float rotateSpeed = 300;
@@ -27,7 +26,7 @@ public class CheckResManager : MonoBehaviour
     private void Awake()
     {        
         Instance = this;
-        LuaMVC.Loom.Instance.Init();
+        //LuaMVC.Loom.Instance.Init();
     }
     private void Start()
     {
@@ -36,8 +35,7 @@ public class CheckResManager : MonoBehaviour
 
 
     private void Update()
-    {
-        loading_Tra.Rotate(-Vector3.forward * rotateSpeed * Time.deltaTime);
+    {     
     }
     /// <summary>
     /// 检测是否要释放资源
@@ -65,8 +63,7 @@ public class CheckResManager : MonoBehaviour
     /// </summary>
     /// <returns></returns>
     IEnumerator OnExtractResource()
-    {
-        text.text = "正在检查本地文件...";
+    {     
         string dataPath = Utils_LuaMVC.DataPath + "MVCSCRIPT/"; /*Utils_LuaMVC.DataPath + UnityEngine.SceneManagement.SceneManager.GetActiveScene().name + "/"; */ //数据目录  + 当前游戏的名字 为了让他们更好的分开
         string resPath = Utils_LuaMVC.AppContentPath(); //游戏包资源目录
 
@@ -124,8 +121,7 @@ public class CheckResManager : MonoBehaviour
                 infile = resPath + file;  //0
                 outfile = dataPath + file;
                 curIndex++;
-                //message = "正在解包文件:>" + fs[0];
-                text.text = string.Format("正在解压本地... ({0}/{1})", curIndex.ToString(), totalNum.ToString());
+                //message = "正在解包文件:>" + fs[0];              
                 //Debug.Log("正在解包文件(" + curIndex + "/" + totalNum + "):>" + infile);
                 string dir = Path.GetDirectoryName(outfile);
                 if (!Directory.Exists(dir)) Directory.CreateDirectory(dir);
@@ -148,25 +144,7 @@ public class CheckResManager : MonoBehaviour
                     }
 
                 }
-                yield return 0;
-                //}
-                //else
-                //{
-                //    if (File.Exists(outfile))
-                //    {
-                //        File.Delete(outfile);
-                //    }
-                //    try
-                //    {
-                //        File.Copy(infile, outfile, true);
-                //    }
-                //    catch (Exception ex)
-                //    {
-
-                //        throw new Exception("release error : " + "infile :" + infile + "          outfile:" + outfile);
-                //    }
-
-                //}
+                yield return 0;              
                 yield return new WaitForEndOfFrame();
             }
             message = "解包完成!!!";
@@ -175,8 +153,7 @@ public class CheckResManager : MonoBehaviour
 
         message = string.Empty;
         //释放完成，开始启动更新资源        
-        PlayerPrefs.SetInt("releaseLua" + Application.productName, 1);
-        text.text = "正在检查更新...";
+        PlayerPrefs.SetInt("releaseLua" + Application.productName, 1);     
 
         yield return OnUpdateResource();
     }
@@ -184,16 +161,15 @@ public class CheckResManager : MonoBehaviour
     {
         switch (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name)
         {
-            case "Game_Brag_Loading":
-                return AppConst.WebUrl_HotUpdate + "Brag/";
+            case "Tmp":
+                return AppConst.WebUrl_HotUpdate + "Tmp/";
             default:
                 throw new Exception("未对当前游戏配置更新url");
         }
 
     }
     IEnumerator OnUpdateResource()
-    {
-        text.text = "正在检查更新...";
+    {    
         if (!AppConst.UpdateMode)
         {
             OnResourceInited();
@@ -331,15 +307,13 @@ public class CheckResManager : MonoBehaviour
             }
         }
         yield return new WaitForEndOfFrame();
-        File.WriteAllBytes(localFiles, www.bytes);
-        text.text = "正在初始化游戏...";
+        File.WriteAllBytes(localFiles, www.bytes);     
         OnResourceInited();
     }
 
     void OnUpdateFailed(string file)
     {
-        //string message = "更新失败!>" + file;
-        text.text = "更新失败,正在返回大厅";
+        //string message = "更新失败!>" + file;       
         StartCoroutine(UpdateFile());
     }
     IEnumerator UpdateFile()
@@ -389,8 +363,7 @@ public class CheckResManager : MonoBehaviour
 
                 Loom.InvokeSync(() =>
                 {
-                    text.text = string.Format("正在下载最新资源... ({0}/{1}))       {2}", allreadyUpdate.ToString(), needUpdateCount.ToString(), data.evParam.ToString());
-
+                    //text.text = string.Format("正在下载最新资源... ({0}/{1}))       {2}", allreadyUpdate.ToString(), needUpdateCount.ToString(), data.evParam.ToString());
                 });
                 break;
             case NotiConst.UPDATE_Progress:

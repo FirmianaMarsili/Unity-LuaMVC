@@ -1,0 +1,114 @@
+﻿local Observer=require("LuaScripts/PureMVC/Patterns/Observer/Observer")
+local View=class("View")
+function View:ctor()
+	self.m_mediatorMap ={};
+	self.m_observerMap ={};
+    self:InitializeView();
+end
+
+function View:InitializeView()
+end
+
+function View:RegisterObserver(notificationName, observer)
+	if not self.m_observerMap[notificationName] then
+		self.m_observerMap[notificationName] = {};
+	end
+
+	local list=self.m_observerMap[notificationName]
+	list[#list+1]=observer;
+end
+
+function View:NotifyObservers(notification)
+	local observers
+	if self.m_observerMap[notification:GetName()] then
+		local observers_ref = self.m_observerMap[notification:GetName()];
+		observers={}
+		for i=1,#observers_ref do
+			observers[i]=observers_ref[i]
+		end
+	end
+
+	if observers then
+		for i=1,#observers do
+			local observer = observers[i];
+			observer:NotifyObserver(notification);
+		end
+	end
+end
+
+function View:RemoveObserver(notificationName, notifyContext)
+	if self.m_observerMap[notificationName] then
+		local observers = self.m_observerMap[notificationName];
+
+		for i=1,#observers do
+			if (observers[i]:CompareNotifyContext(notifyContext)) then
+				observers[i] = nil
+				table.remove(observers,i)
+				break;
+			end
+		end
+
+		if #observers == 0 then
+			self.m_observerMap[notificationName]=nil
+		end
+	end
+end
+function View:RemoveAllObserver()
+	local tmp_observerMap = self.m_observerMap
+	for i, v in pairs(tmp_observerMap) do
+        for ii, vv in pairs(v) do
+            self:RemoveObserver(i,vv)
+        end
+
+	end
+end
+
+function View:RegisterMediator(mediator)
+
+	if self.m_mediatorMap[mediator:GetMediatorName()] then return end;
+
+
+	self.m_mediatorMap[mediator:GetMediatorName()] = mediator;
+	mediator:OnRegister();
+end
+
+function View:RetrieveMediator(mediatorName)
+	return self.m_mediatorMap[mediatorName];
+end
+
+function View:RemoveMediator(mediatorName)
+	local mediator
+	if not self.m_mediatorMap[mediatorName] then return end;
+	mediator = self.m_mediatorMap[mediatorName];
+	self.m_mediatorMap[mediatorName]=nil;
+
+
+	if mediator then mediator:OnRemove() end;
+	mediator = nil;
+end
+function View:RemoveAllMediator()
+	local tmp_mediatorMap =  self.m_mediatorMap
+	for i, v in pairs(tmp_mediatorMap) do
+        self:RemoveMediator(i)
+	end
+	tmp_mediatorMap = nil
+end
+
+function View:HasMediator(mediatorName)
+	return self.m_mediatorMap[mediatorName]~=nil;
+end
+
+function View.Instance()
+	if View.m_instance == nil then
+		View.m_instance = View.New();
+	end
+	return View.m_instance;
+end
+function View.Release()
+	View.m_instance = nil
+end
+
+function View:InitializeModel()
+end
+
+return View

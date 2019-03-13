@@ -30,8 +30,8 @@ public static class LuaCallCSharp_Global
                 typeof(System.Object),
                 typeof(XLua.LuaTable),
                 typeof(object),
-                //typeof(Asset.Code.Brag.NetManager._OpenClient),               
-                //typeof(Asset.Code.Brag.NetManager.OnData),
+                //typeof(Asset.Code.Tmp.NetManager._OpenClient),               
+                //typeof(Asset.Code.Tmp.NetManager.OnData),
             };
         }
 
@@ -139,7 +139,7 @@ public static class LuaCallCSharp_Global
         get
         {
             var tmpType = (from type in Assembly.Load("Assembly-CSharp").GetTypes()
-                           where ((type.Namespace != null) && (type.Namespace.Contains("Assets")/* || type.Namespace.Contains("TA_IOCP")*/ || type.Namespace.Contains("PureMVC") || type.Namespace.Contains("LuaMVC") || type.Namespace.Contains("Brag_Sieve_Drag") || type.Namespace == "Game"/*||type.Namespace == "SG"*/))
+                           where ((type.Namespace != null) && (type.Namespace.Contains("Assets")/* || type.Namespace.Contains("TA_IOCP")*/ || type.Namespace.Contains("PureMVC") || type.Namespace.Contains("LuaMVC") || type.Namespace.Contains("Tmp_Sieve_Drag") || type.Namespace == "Game"/*||type.Namespace == "SG"*/))
                            select type).ToList();
             //WindowDll.GetOpenFileName1
             //foreach (var item in tmpType)
@@ -370,7 +370,7 @@ public static class LuaCallCSharp_Global
             };
             var customTypes = (from assembly in customAssemblys.Select(s => Assembly.Load(s))
                                from type in assembly.GetExportedTypes()
-                               where type.Namespace != null && !type.Namespace.StartsWith("XLua") && !type.Namespace.StartsWith("UnityEngine") && (type.Namespace.Contains("Assets")/* || type.Namespace.Contains("TA_IOCP")*/ || type.Namespace.Contains("PureMVC") || type.Namespace.Contains("LuaMVC") || type.Namespace.Contains("Brag_Sieve_Drag") || type.Namespace == "Game"/*||type.Namespace == "SG"*/)
+                               where type.Namespace != null && !type.Namespace.StartsWith("XLua") && !type.Namespace.StartsWith("UnityEngine") && (type.Namespace.Contains("Assets")/* || type.Namespace.Contains("TA_IOCP")*/ || type.Namespace.Contains("PureMVC") || type.Namespace.Contains("LuaMVC") || type.Namespace.Contains("Tmp_Sieve_Drag") || type.Namespace == "Game"/*||type.Namespace == "SG"*/)
                                        && type.BaseType != typeof(MulticastDelegate) && !type.IsInterface && !type.IsEnum
                                select type);
             var custom = (from assembly in customAssemblys.Select(s => Assembly.Load(s))

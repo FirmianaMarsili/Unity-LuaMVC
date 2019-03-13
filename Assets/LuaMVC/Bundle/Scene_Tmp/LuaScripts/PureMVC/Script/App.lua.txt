@@ -1,0 +1,42 @@
+﻿require("LuaScripts/PureMVC/class")
+Controller=require("LuaScripts/PureMVC/Core/Controller")
+Model=require("LuaScripts/PureMVC/Core/Model")
+View=require("LuaScripts/PureMVC/Core/View")
+Notification=require("LuaScripts/PureMVC/Patterns/Observer/Notification")
+local NotificationType = require("Scene_Tmp/LuaScripts/PureMVC/Script/NotificationType")
+require("Scene_Tmp/LuaScripts/PureMVC/Script/ViewName")
+require("LuaScripts/PureMVC/UtilLua/ComponentOperation")
+require("LuaScripts/PureMVC/UtilLua/luaJson")
+local Facade=require("LuaScripts/PureMVC/Patterns/Facade/Facade")
+local App=class("App",Facade)
+
+
+--按模块划分
+--模块Command，操作数据Proxy
+--Proxy，存储数据
+--Mediator view
+
+
+function App:ModulesInit()
+    local GameObject = CS.UnityEngine.GameObject
+    local AssetLoader = CS.LuaMVC.ResourceManager.Instance
+    local gameObject = GameObject('Coroutine_Runner')
+    local cs_coroutine_runner = gameObject:AddComponent(typeof(CS.Coroutine_Runner))
+    cs_coroutine.cs_coroutine_runner = cs_coroutine_runner
+    local tranParent = GameObject.Find("Canvas").transform
+    local view = View.Instance()
+    AssetLoader:LoadPrefab("Scene_Tmp/GamePrafab",{"Test1","Test2"}, function(assetTable)
+        local Test1 = ComponentOperation.ItAndSP(assetTable[0],tranParent)
+        Test1:AddComponent(typeof(CS.LuaMVC.LuaMonobehaviour)):Init("Scene_Tmp/LuaScripts/PureMVC/Script/Module/Test1/Test1View")
+        local Test1Mediator = require("Scene_Tmp/LuaScripts/PureMVC/Script/Module/Test1/Test1Mediator")
+        view:RegisterMediator(Test1Mediator.New("Test1Mediator"))
+
+        local Test2 = ComponentOperation.ItAndSP(assetTable[1],tranParent)
+        Test2:AddComponent(typeof(CS.LuaMVC.LuaMonobehaviour)):Init("Scene_Tmp/LuaScripts/PureMVC/Script/Module/Test2/Test2View")
+        local Test2Mediator = require("Scene_Tmp/LuaScripts/PureMVC/Script/Module/Test2/Test2Mediator")
+        view:RegisterMediator(Test2Mediator.New("Test2Mediator"))
+        assetTable = nil
+    end)
+end
+
+return App

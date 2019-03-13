@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="63e38466-a3b0-4410-bbf0-582aca9ce8a6" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PureMVC/Script/App.lua.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="450">
+              <caret line="27" column="66" selection-start-line="27" selection-start-column="66" selection-end-line="27" selection-end-column="66" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PureMVC/Script/Module/Test1/Test1View.lua.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="6" column="16" lean-forward="true" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PureMVC/Script/ViewName.lua.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Main.lua.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="3" column="3" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PureMVC/Script/Module/Test1/Test1Mediator.lua.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="10" column="59" selection-start-line="10" selection-start-column="59" selection-end-line="10" selection-end-column="59" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/PureMVC/Script/Module/Test2/Test2Mediator.lua.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PureMVC/Script/Module/Test2/Test2View.lua.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="1" column="46" selection-end-line="6" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/PureMVC/Script/NotificationType.lua.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="7" column="38" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="38" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="NewLua" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>CS.LuaMonobehaviour</find>
+      <find>//</find>
+      <find>luamvc.s</find>
+      <find>ClickBgm</find>
+      <find>quit_Btn</find>
+      <find>ComponentOperation</find>
+      <find>showHand_Btn</find>
+      <find>pairs</find>
+      <find>ipairs</find>
+      <find>:Remove(</find>
+      <find>:ctor</find>
+      <find>inport</find>
+      <find>CS.LuaMVC.ResourceManager.Instance</find>
+      <find>setactive</find>
+      <find>cs_coroutine&quot;</find>
+      <find>ComponentOperation&quot;</find>
+      <find>HallMediator.view.panel.gameObject:SetActive</find>
+      <find>Canvas/UIPanel/Loading</find>
+      <find>OpenHall</find>
+      <find>GetStringGold</find>
+      <find>comeback</find>
+      <find>:JoinStandardMode</find>
+      <find>p</find>
+      <find>1180</find>
+      <find>Context</find>
+      <find>DOScale</find>
+      <find>Scene_Brag</find>
+      <find>Scene_LTS/LuaScripts/Patterns/Mediator/Mediator</find>
+      <find>Test2</find>
+      <find>Test1</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+      <replace>InvokeSync</replace>
+      <replace>rapidjson.decode</replace>
+      <replace>rapidjson.encode</replace>
+      <replace>CS.LuaMonobehaviour</replace>
+      <replace>CS.LuaMVC.LuaMonobehaviour</replace>
+      <replace>Scene_Tmp</replace>
+      <replace>Test1</replace>
+      <replace>Test2</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>E:\Project\GameBox\Assets\LuaMVC\Resources\Scene_Brag\LuaScripts</dir>
+      <dir>E:\Project\GameBox\Assets\LuaMVC\Resources\Scene_Brag\LuaScripts\.idea</dir>
+      <dir>E:\Project\GameBox\Assets\LuaMVC\Bundle\Scene_Brag\LuaScripts</dir>
+      <dir>E:\Project\9966\Assets\LuaMVC\Bundle\Scene_Brag\LuaScripts</dir>
+      <dir>E:\Project\Unity-LuaMVC\Assets\LuaMVC\Bundle\Scene_Tmp\LuaScripts</dir>
+    </dirStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/UtilLua/emoji.lua.txt" />
+        <option value="$PROJECT_DIR$/Views/HallView.lua.txt" />
+        <option value="$PROJECT_DIR$/_LuaFacade.lua.txt" />
+        <option value="$PROJECT_DIR$/UtilLua/util.lua.txt" />
+        <option value="$PROJECT_DIR$/Views/StandardModeView.lua.txt" />
+        <option value="$PROJECT_DIR$/Views/GameModeView.lua.txt" />
+        <option value="$PROJECT_DIR$/Socket/UserCmd.lua.txt" />
+        <option value="$PROJECT_DIR$/Mediator/AudioMediator.lua.txt" />
+        <option value="$PROJECT_DIR$/Mediator/ToolPanelMediator.lua.txt" />
+        <option value="$PROJECT_DIR$/Views/UserInfoView.lua.txt" />
+        <option value="$PROJECT_DIR$/Mediator/LoadingViewMediator.lua.txt" />
+        <option value="$PROJECT_DIR$/Mediator/RoomListMediator.lua.txt" />
+        <option value="$PROJECT_DIR$/Controllers/StartUpCommand.lua.txt" />
+        <option value="$PROJECT_DIR$/Mediator/HallMediator.lua.txt" />
+        <option value="$PROJECT_DIR$/UtilLua/cs_coroutine.lua.txt" />
+        <option value="$PROJECT_DIR$/UtilLua/inport.lua.txt" />
+        <option value="$PROJECT_DIR$/Proxy/StandardModeProxy.lua.txt" />
+        <option value="$PROJECT_DIR$/LuaFacade.lua.txt" />
+        <option value="$PROJECT_DIR$/UtilLua/chip.lua.txt" />
+        <option value="$PROJECT_DIR$/Mediator/StandardModeMediator.lua.txt" />
+        <option value="$PROJECT_DIR$/Controllers/LoginCommand.lua.txt" />
+        <option value="$PROJECT_DIR$/NotificationType.lua.txt" />
+        <option value="$PROJECT_DIR$/Mediator/TipTextMediator.lua.txt" />
+        <option value="$PROJECT_DIR$/PureMVC/Script/Module/Hall/HallView.lua.txt" />
+        <option value="$PROJECT_DIR$/PureMVC/Script/Module/StandardMode/StandardModeView.lua.txt" />
+        <option value="$PROJECT_DIR$/PureMVC/Script/Socket/NetManager.lua.txt" />
+        <option value="$PROJECT_DIR$/PureMVC/Script/Module/RoomList/RoomListView.lua.txt" />
+        <option value="$PROJECT_DIR$/PureMVC/Script/Module/Hall/HallMediator.lua.txt" />
+        <option value="$PROJECT_DIR$/PureMVC/Script/Module/RoomList/RoomListMediator.lua.txt" />
+        <option value="$PROJECT_DIR$/PureMVC/Core/Model.lua.txt" />
+        <option value="$PROJECT_DIR$/PureMVC/Core/View.lua.txt" />
+        <option value="$PROJECT_DIR$/PureMVC/Patterns/Facade/Facade.lua.txt" />
+        <option value="$PROJECT_DIR$/PureMVC/Core/Controller.lua.txt" />
+        <option value="$PROJECT_DIR$/PureMVC/Script/Module/TipText/TipTextMediator.lua.txt" />
+        <option value="$PROJECT_DIR$/PureMVC/Script/UtilLua/inport.lua.txt" />
+        <option value="$PROJECT_DIR$/PureMVC/Script/UtilLua/ComponentOperation.lua.txt" />
+        <option value="$PROJECT_DIR$/PureMVC/Script/UtilLua/cs_coroutine.lua.txt" />
+        <option value="$PROJECT_DIR$/PureMVC/Script/Module/Login/LoginCommand.lua.txt" />
+        <option value="$PROJECT_DIR$/PureMVC/Script/Module/StartUp/StartUpCommand.lua.txt" />
+        <option value="$PROJECT_DIR$/PureMVC/Script/UtilLua/chip.lua.txt" />
+        <option value="$PROJECT_DIR$/PureMVC/Script/Module/StandardMode/StandardModeMediator.lua.txt" />
+        <option value="$PROJECT_DIR$/PureMVC/Script/Module/Login/LoginProxy.lua.txt" />
+        <option value="$PROJECT_DIR$/PureMVC/Script/Module/Login/LoginCommand-.lua.txt" />
+        <option value="$PROJECT_DIR$/PureMVC/Script/Module/Audio/AudioMediator.lua.txt" />
+        <option value="$PROJECT_DIR$/PureMVC/Script/ViewName.lua.txt" />
+        <option value="$PROJECT_DIR$/PureMVC/Script/NotificationType.lua.txt" />
+        <option value="$PROJECT_DIR$/PureMVC/Script/App.lua.txt" />
+        <option value="$PROJECT_DIR$/PureMVC/Script/Module/Test1/Test1View.lua.txt" />
+        <option value="$PROJECT_DIR$/PureMVC/Script/Module/Test2/Test2View.lua.txt" />
+        <option value="$PROJECT_DIR$/PureMVC/Script/Module/Test1/Test1Mediator.lua.txt" />
+        <option value="$PROJECT_DIR$/PureMVC/Script/Module/Test2/Test2Mediator.lua.txt" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1912" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1096" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="LuaScripts" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LuaScripts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LuaScripts" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LuaScripts" type="462c0819:PsiDirectoryNode" />
+              <item name="PureMVC" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LuaScripts" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LuaScripts" type="462c0819:PsiDirectoryNode" />
+              <item name="PureMVC" type="462c0819:PsiDirectoryNode" />
+              <item name="Script" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LuaScripts" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LuaScripts" type="462c0819:PsiDirectoryNode" />
+              <item name="PureMVC" type="462c0819:PsiDirectoryNode" />
+              <item name="Script" type="462c0819:PsiDirectoryNode" />
+              <item name="Module" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LuaScripts" type="b2602c69:ProjectViewProjectNode" />
+              <item name="LuaScripts" type="462c0819:PsiDirectoryNode" />
+              <item name="PureMVC" type="462c0819:PsiDirectoryNode" />
+              <item name="Script" type="462c0819:PsiDirectoryNode" />
+              <item name="Module" type="462c0819:PsiDirectoryNode" />
+              <item name="Test2" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="LuaScripts" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="SearchEverywhereHistoryKey" value="&#9;FILE&#9;file://E:/Project/GameBox/Assets/LuaMVC/Resources/Scene_Brag/LuaScripts/Views/RoomListView.lua.txt" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552470491045" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Project\GameBox\Assets\LuaMVC\Resources\Scene_Brag\LuaScripts\PureMVC\Script\UtilLua" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="63e38466-a3b0-4410-bbf0-582aca9ce8a6" name="Default Changelist" comment="" />
+      <created>1535695085747</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1535695085747</updated>
+      <workItem from="1535695089682" duration="5823000" />
+      <workItem from="1535703765647" duration="7408000" />
+      <workItem from="1535940693506" duration="3933000" />
+      <workItem from="1536047294154" duration="2770000" />
+      <workItem from="1536050181551" duration="7036000" />
+      <workItem from="1536117688135" duration="5292000" />
+      <workItem from="1536201741304" duration="28308000" />
+      <workItem from="1536630515362" duration="29278000" />
+      <workItem from="1536836380305" duration="725000" />
+      <workItem from="1536837420576" duration="3152000" />
+      <workItem from="1537005363935" duration="4691000" />
+      <workItem from="1537238597246" duration="36334000" />
+      <workItem from="1537427856261" duration="27639000" />
+      <workItem from="1537594841012" duration="16228000" />
+      <workItem from="1537839984408" duration="12449000" />
+      <workItem from="1537927161600" duration="4029000" />
+      <workItem from="1537940407555" duration="8530000" />
+      <workItem from="1537950357465" duration="6171000" />
+      <workItem from="1538012592038" duration="21344000" />
+      <workItem from="1538102763565" duration="13589000" />
+      <workItem from="1538189348805" duration="11548000" />
+      <workItem from="1538271738220" duration="37000" />
+      <workItem from="1538275411832" duration="8479000" />
+      <workItem from="1538289989076" duration="9949000" />
+      <workItem from="1538964269907" duration="17490000" />
+      <workItem from="1539049663410" duration="10320000" />
+      <workItem from="1539074080925" duration="4184000" />
+      <workItem from="1539139519487" duration="8107000" />
+      <workItem from="1539221695374" duration="21246000" />
+      <workItem from="1539310657061" duration="23498000" />
+      <workItem from="1539395297993" duration="6575000" />
+      <workItem from="1539411031950" duration="9540000" />
+      <workItem from="1539589289184" duration="6998000" />
+      <workItem from="1539657190474" duration="2037000" />
+      <workItem from="1539669853293" duration="14155000" />
+      <workItem from="1539686581475" duration="5000" />
+      <workItem from="1539747426757" duration="20252000" />
+      <workItem from="1539827429276" duration="15577000" />
+      <workItem from="1539854644952" duration="4928000" />
+      <workItem from="1539912560264" duration="10559000" />
+      <workItem from="1540000495920" duration="16313000" />
+      <workItem from="1540173570528" duration="12090000" />
+      <workItem from="1540258709650" duration="10441000" />
+      <workItem from="1540365774616" duration="88000" />
+      <workItem from="1540366016889" duration="6300000" />
+      <workItem from="1540453673068" duration="985000" />
+      <workItem from="1540459319053" duration="36999000" />
+      <workItem from="1540801713759" duration="7313000" />
+      <workItem from="1541064042685" duration="1245000" />
+      <workItem from="1541127694777" duration="6123000" />
+      <workItem from="1542619198215" duration="4359000" />
+      <workItem from="1542701890541" duration="1289000" />
+      <workItem from="1542704715704" duration="2094000" />
+      <workItem from="1543218788576" duration="6000" />
+      <workItem from="1544424184793" duration="1557000" />
+      <workItem from="1544520449781" duration="5162000" />
+      <workItem from="1544582655486" duration="7942000" />
+      <workItem from="1544770334578" duration="27000" />
+      <workItem from="1544772997943" duration="2752000" />
+      <workItem from="1544779950394" duration="6413000" />
+      <workItem from="1544853722665" duration="11284000" />
+      <workItem from="1545129508886" duration="682000" />
+      <workItem from="1545187680113" duration="15613000" />
+      <workItem from="1545276141108" duration="16796000" />
+      <workItem from="1545358146951" duration="39341000" />
+      <workItem from="1545619964795" duration="15416000" />
+      <workItem from="1545705398716" duration="7417000" />
+      <workItem from="1545808034202" duration="3803000" />
+      <workItem from="1545813259484" duration="3329000" />
+      <workItem from="1545877101404" duration="8829000" />
+      <workItem from="1545962134485" duration="2533000" />
+      <workItem from="1545975928464" duration="7183000" />
+      <workItem from="1546062117526" duration="3264000" />
+      <workItem from="1546072137651" duration="1713000" />
+      <workItem from="1547261848113" duration="22510000" />
+      <workItem from="1547535301465" duration="50000" />
+      <workItem from="1547535369532" duration="199000" />
+      <workItem from="1547535595730" duration="52000" />
+      <workItem from="1547535846138" duration="8000" />
+      <workItem from="1547535862930" duration="6000" />
+      <workItem from="1547537056428" duration="96000" />
+      <workItem from="1547611577794" duration="3852000" />
+      <workItem from="1547622835749" duration="3880000" />
+      <workItem from="1548602549832" duration="242000" />
+      <workItem from="1548643419543" duration="608000" />
+      <workItem from="1552467626294" duration="2893000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="758857000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="1912" y="-8" width="1936" height="1096" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20575693" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.48667377" weight="0.20585048" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.48720682" weight="0.3118503" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
+      <window_info anchor="bottom" id="LuaCheck" order="7" weight="0.32936078" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32936078" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5127932" side_tool="true" weight="0.39869988" />
+      <window_info anchor="bottom" id="Messages" order="12" />
+      <window_info anchor="right" id="Maven" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Database" order="7" />
+      <window_info anchor="right" id="Maven Projects" order="8" />
+    </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14925373" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Capture Tool" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info active="true" anchor="bottom" id="Find" order="1" sideWeight="0.48667377" visible="true" weight="0.20585048" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.48720682" weight="0.39869988" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32936078" />
+      <window_info anchor="bottom" id="LuaCheck" order="7" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.32936078" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5127932" side_tool="true" weight="0.39869988" />
+      <window_info anchor="bottom" id="Messages" order="12" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Palette&#9;" order="6" />
+      <window_info anchor="right" id="Database" order="7" />
+      <window_info anchor="right" id="Maven Projects" order="8" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="lua-line">
+          <url>file://$PROJECT_DIR$/Proxy/StandardModeProxy.lua.txt</url>
+          <line>126</line>
+          <option name="timeStamp" value="9" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="lua-line">
+          <url>file://$PROJECT_DIR$/PureMVC/Script/Module/Hall/HallMediator.lua.txt</url>
+          <line>50</line>
+          <option name="timeStamp" value="45" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/Controllers/LoginCommand.lua.txt" />
+    <entry file="file://$PROJECT_DIR$/Mediator/AudioMediator.lua.txt" />
+    <entry file="file://$PROJECT_DIR$/Controllers/StartUpCommand.lua.txt" />
+    <entry file="file://$PROJECT_DIR$/Mediator/RoomListMediator.lua.txt" />
+    <entry file="file://$PROJECT_DIR$/Mediator/TipTextMediator.lua.txt" />
+    <entry file="file://E:/Test/TetsLuaMvc/Assets/Game/Test/Resources/PureMVC/Script/Module/Login/LoginMediator.lua.txt" />
+    <entry file="file://$PROJECT_DIR$/PureMVC/Script/Socket/UserCmd.lua.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PureMVC/Script/Module/RoomList/RoomListView.lua.txt" />
+    <entry file="file://$PROJECT_DIR$/PureMVC/Script/Module/LuaFacade.lua.txt" />
+    <entry file="file://$PROJECT_DIR$/PureMVC/Core/Model.lua.txt" />
+    <entry file="file://$PROJECT_DIR$/PureMVC/Patterns/Mediator/Mediator.lua.txt" />
+    <entry file="file://$PROJECT_DIR$/PureMVC/Core/Controller.lua.txt" />
+    <entry file="file://$APPLICATION_PLUGINS_DIR$/EmmyLua/classes/debugger/Emmy.lua">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="50" column="7" selection-start-line="50" selection-start-column="7" selection-end-line="50" selection-end-column="7" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PureMVC/Script/Module/RoomList/RoomListMediator.lua.txt" />
+    <entry file="file://$PROJECT_DIR$/PureMVC/Script/UtilLua/tipMsg.lua.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PureMVC/Script/UtilLua/ComponentOperation.lua.txt" />
+    <entry file="file://$PROJECT_DIR$/PureMVC/Script/Socket/NetManager.lua.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PureMVC/Script/Module/StandardMode/StandardModeView.lua.txt" />
+    <entry file="file://$PROJECT_DIR$/PureMVC/class.lua.txt" />
+    <entry file="file://$PROJECT_DIR$/PureMVC/Core/View.lua.txt" />
+    <entry file="file://$PROJECT_DIR$/PureMVC/Patterns/Facade/Facade.lua.txt" />
+    <entry file="file://$PROJECT_DIR$/PureMVC/Script/UtilLua/util.lua.txt" />
+    <entry file="file://$PROJECT_DIR$/PureMVC/Script/UtilLua/chip.lua.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="16" selection-start-line="16" selection-end-line="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PureMVC/Script/Module/Hall/HallView.lua.txt" />
+    <entry file="file://$PROJECT_DIR$/PureMVC/Script/Module/Login/LoginMediator.lua.txt" />
+    <entry file="file://$PROJECT_DIR$/PureMVC/Script/Module/Login/LoginCommand-.lua.txt" />
+    <entry file="file://$PROJECT_DIR$/PureMVC/Script/Module/TipText/TipTextView.lua.txt" />
+    <entry file="file://$PROJECT_DIR$/PureMVC/Script/Module/TipText/TipTextMediator.lua.txt" />
+    <entry file="file://$PROJECT_DIR$/PureMVC/Script/UtilLua/cs_coroutine.lua.txt" />
+    <entry file="file://$PROJECT_DIR$/PureMVC/Script/Module/StandardMode/StandardModeProxy.lua.txt" />
+    <entry file="file://$PROJECT_DIR$/PureMVC/Script/Module/StartUp/StartUpCommand.lua.txt" />
+    <entry file="file://$PROJECT_DIR$/PureMVC/Script/Module/Login/LoginView.lua.txt" />
+    <entry file="file://$PROJECT_DIR$/PureMVC/Script/Module/Login/LoginProxy.lua.txt" />
+    <entry file="file://$PROJECT_DIR$/PureMVC/Patterns/Proxy/Proxy.lua.txt" />
+    <entry file="file://$PROJECT_DIR$/PureMVC/Script/UtilLua/inport.lua.txt" />
+    <entry file="file://$PROJECT_DIR$/PureMVC/Script/Module/Hall/HallMediator.lua.txt" />
+    <entry file="file://$PROJECT_DIR$/PureMVC/Script/Module/StandardMode/StandardModeMediator.lua.txt" />
+    <entry file="file://$PROJECT_DIR$/PureMVC/Patterns/Command/Command.lua.txt" />
+    <entry file="file://$PROJECT_DIR$/PureMVC/Patterns/Observer/Observer.lua.txt" />
+    <entry file="file://$PROJECT_DIR$/PureMVC/Patterns/Observer/Notifier.lua.txt" />
+    <entry file="file://$PROJECT_DIR$/PureMVC/Patterns/Observer/Notification.lua.txt" />
+    <entry file="file://$PROJECT_DIR$/PureMVC/Script/Module/Audio/AudioMediator.lua.txt" />
+    <entry file="file://$PROJECT_DIR$/PureMVC/Script/Module/Login/LoginCommand.lua.txt" />
+    <entry file="file://$PROJECT_DIR$/Main.lua.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="3" column="3" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PureMVC/Script/ViewName.lua.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="9" column="12" lean-forward="true" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PureMVC/Script/App.lua.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="27" column="66" selection-start-line="27" selection-start-column="66" selection-end-line="27" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PureMVC/Script/Module/Test1/Test1View.lua.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="6" column="16" lean-forward="true" selection-start-line="6" selection-start-column="16" selection-end-line="6" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PureMVC/Script/Module/Test2/Test2View.lua.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="1" column="46" selection-end-line="6" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PureMVC/Script/Module/Test1/Test1Mediator.lua.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="10" column="59" selection-start-line="10" selection-start-column="59" selection-end-line="10" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PureMVC/Script/NotificationType.lua.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="7" column="38" selection-start-line="7" selection-start-column="23" selection-end-line="7" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/PureMVC/Script/Module/Test2/Test2Mediator.lua.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>Lua</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>LuaScripts</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>Lua</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>LuaLib</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

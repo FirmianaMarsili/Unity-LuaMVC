@@ -1,0 +1,16 @@
+﻿local Facade=require("LuaScripts/PureMVC/Patterns/Facade/Facade")
+local Notification=class("Notification")
+
+function Notification:ctor()
+	self.m_facade = Facade.Instance()
+end
+
+function Notification:SendNotification(notificationName, body, type) 
+	self.m_facade:SendNotification(notificationName, body, type);
+end
+
+function Notification:GetFacade()
+	return self.m_facade;
+end
+
+return Notification

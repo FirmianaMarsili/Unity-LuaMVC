@@ -1,0 +1,11 @@
+﻿-- 
+
+
+local NotificationType = {
+
+    StartUp = "Start Up",    
+	ChangeText = "ChangeText",
+	ReleaseDelegate = "ReleaseDelegate",
+}
+
+return NotificationType

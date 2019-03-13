@@ -1,0 +1,24 @@
+﻿local Command=class("Command")
+function Command:ctor()
+	self.m_subCommands ={};
+	self:InitializeMacroCommand();
+end
+
+function Command:Execute(notification)
+	while #self.m_subCommands > 0 do
+		local commandType = self.m_subCommands[0];
+		local commandInstance = commandType.New();
+		commandInstance:Execute(notification);
+
+		table.remove(self.m_subCommands,1);
+	end
+end
+
+function Command:InitializeMacroCommand()
+end
+
+function Command:AddSubCommand(commandType)
+    self.m_subCommands[#self.m_subCommands]=commandType
+end
+
+return Command

@@ -1,0 +1,7 @@
+Test2View = {}
+local ViewName = require("Scene_Tmp/LuaScripts/PureMVC/Script/ViewName")
+Test2View.ViewName = ViewName.Test2View
+function Test2View.awake()
+    Test2View.show_Text = ComponentOperation.FindComponent(Test2View.panel,"Text","Text")
+end
+return Test2View

@@ -1,0 +1,100 @@
+﻿local Controller=require("LuaScripts/PureMVC/Core/Controller")
+local View=require("LuaScripts/PureMVC/Core/View")
+local Model=require("LuaScripts/PureMVC/Core/Model")
+local Facade=class("Facade")
+function Facade:ctor()
+	self:InitializeFacade()
+end
+
+function Facade:RegisterProxy(proxy)
+	self.m_model:RegisterProxy(proxy);
+end
+
+function Facade:RetrieveProxy(proxyName)
+	return self.m_model:RetrieveProxy(proxyName);
+end
+
+function Facade:RemoveProxy(proxyName)
+	return self.m_model:RemoveProxy(proxyName);
+end
+
+function Facade:HasProxy(proxyName)
+	return self.m_model:HasProxy(proxyName);
+end
+
+function Facade:RegisterCommand(notificationName, commandType)
+	self.m_controller:RegisterCommand(notificationName, commandType);
+end
+
+function Facade:RemoveCommand(notificationName)
+	self.m_controller:RemoveCommand(notificationName);
+end
+
+function Facade:HasCommand(notificationName)
+	return self.m_controller:HasCommand(notificationName);
+end
+
+function Facade:RegisterMediator(mediator)
+	self.m_view:RegisterMediator(mediator);
+end
+
+function Facade:RetrieveMediator(mediatorName)
+	return self.m_view.RetrieveMediator(mediatorName);
+end
+
+function Facade:RemoveMediator(mediatorName)
+	return self.m_view:RemoveMediator(mediatorName);
+end
+
+function Facade:HasMediator(mediatorName)
+	return self.m_view:HasMediator(mediatorName);
+end
+
+function Facade:NotifyObservers(notification)
+	self.m_view:NotifyObservers(notification);
+end
+
+
+function Facade:SendNotification(notificationName, body, type)
+	self:NotifyObservers(Notification.New(notificationName, body, type));
+end
+
+function Facade.Instance()
+	if Facade.m_instance == nil then
+		Facade.m_instance = Facade.New();
+	end
+
+	return Facade.m_instance;
+end
+
+function Facade:InitializeFacade()
+	self:InitializeModel();
+	self:InitializeController();
+	self:InitializeView();
+end
+
+function Facade:InitializeController()
+	if self.m_controller then return end;
+	self.m_controller = Controller.Instance();
+end
+
+function Facade:InitializeModel()
+	if self.m_model then return end;
+	self.m_model = Model.Instance();
+end
+
+function Facade:InitializeView()
+	if self.m_view then return end;
+	self.m_view = View.Instance();
+end
+function Facade:Clean()
+	self.m_controller:RemoveAllCommand()
+	self.m_model:RemoveAllProxy()
+	self.m_view:RemoveAllMediator()
+	self.m_view:RemoveAllObserver()
+	--View.Release()
+	--Model.Release()
+	--Controller.Release()
+	--Facade.m_instance = nil
+end
+return Facade

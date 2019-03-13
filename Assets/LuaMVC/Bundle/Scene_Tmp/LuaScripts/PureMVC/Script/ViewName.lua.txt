@@ -1,0 +1,10 @@
+﻿
+
+-- 界面定义
+
+--名字字符串不可一致
+local ViewName = {
+	Test1 = "Test1",
+	Test2 = "Test2"
+}
+return ViewName
